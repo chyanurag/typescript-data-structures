@@ -2,10 +2,10 @@ import { assert } from "chai";
 import Stack from "../src/stack/Stack";
 
 describe("Stack", function () {
-    let stack: Stack<Number>;
+    let stack: Stack<number>;
 
     beforeEach(function () {
-        stack = new Stack<Number>();
+        stack = new Stack<number>();
     });
 
     describe("Initialization check", function () {
