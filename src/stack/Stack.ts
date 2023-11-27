@@ -29,15 +29,15 @@ class Stack<Type> {
      * @returns a boolean value indicating whether the stack is empty or not
      */
     isEmpty() {
-        return this.top === 0;
+        return this.top === -1;
     }
 
     /**
      * provides the last pushed element/topmost element of the stack
      * @returns the topmost element/last pushed element of the stack
      */
-    peek(): void | Type {
-        if (this.top === -1) return;
+    peek(): null | Type {
+        if (this.top === -1) return null;
         return this.stack[this.top];
     }
 
@@ -62,8 +62,8 @@ class Stack<Type> {
      * pops an element off the top of the stack
      * @returns the popped element
      */
-    popBack(): void | Type {
-        if (this.top === -1) return;
+    popBack(): null | Type {
+        if (this.top === -1) return null;
         this.top--;
         return this.stack.pop();
     }
@@ -72,6 +72,7 @@ class Stack<Type> {
      * makes the stack empty
      */
     clear() {
+        this.top = -1;
         this.stack = [];
     }
 }
