@@ -3,9 +3,8 @@
     "version": "1.0.0",
     "description": "A data structures and algorithms library written in typescript",
     "main": "dist/index.js",
-    "type": "module",
     "scripts": {
-        "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha -r ts-node/register 'tests/**/*.ts'"
+        "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha -r ts-node/register 'test/**/*.ts'"
     },
     "repository": {
         "type": "git",
